@@ -17,6 +17,7 @@ public class Latihan2 {
         tampilJudul(identitas);
         String kalimat = tampilInput();
         String convert = vocal2Angka(kalimat);
+        tampilPerKata(kalimat, convert);
     }
     private static String tampilInput() {
         Scanner scanner = new Scanner(System.in);
@@ -37,4 +38,11 @@ public class Latihan2 {
         
         return kalimat;
     }
+    private static void tampilPerKata(String kalimat, String convert) {
+         String[] arrKal = kalimat.split(" ");
+         String[] arrCon = kalimat.split(" ");
+         
+         for(int i=0;i<arrKal.length;i++)
+             System.out.println(arrKal[i]+" => "+arrCon[i]);
+     }
 }
